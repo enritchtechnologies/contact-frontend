@@ -16,7 +16,7 @@ function App() {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://contact-api-env.eba-svprsrtb.us-east-1.elasticbeanstalk.com/api/Contacts');
+      const response = await axios.get('https://contact-api-env.eba-svprsrtb.us-east-1.elasticbeanstalk.com/api/Contacts');
       setContacts(response.data);
     } catch (error) {
       console.error('Error fetching contacts:', error);
@@ -30,7 +30,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://contact-api-env.eba-svprsrtb.us-east-1.elasticbeanstalk.com/api/Contacts', formData);
+      await axios.post('https://contact-api-env.eba-svprsrtb.us-east-1.elasticbeanstalk.com/api/Contacts', formData);
       fetchContacts();
       setFormData({ firstName: '', lastName: '', phone: '' });
     } catch (error) {
