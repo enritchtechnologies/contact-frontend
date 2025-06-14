@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Contact Manager Version 1</h1>
+      <h1>Contact Manager Version 2</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
